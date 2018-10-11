@@ -22,8 +22,8 @@ solonboot是一个跨平台的服务启动框架。有服务端版本（像sprin
 }
 ```
 
-#### 3、组件项目进行配配
-##### 3.1 配置XMoudle
+#### 3、组件项目进行适配（例组件名：module2）
+##### 3.1 适配XMoudle接口
 ```Objective-C
 //XModule2.h
 @interface XModule2 : NSObject<XModule>
@@ -33,19 +33,20 @@ solonboot是一个跨平台的服务启动框架。有服务端版本（像sprin
 //XModule2.m
 @implementation XModule2
 -(void)start:(XApp*) app{
+    //注册路由
     [app reg:self expr:@"xapp://module2/xxx" handler:^(XContext * _Nonnull cxt) {
         [cxt output:@"m2"]; //跳转控制器等...业务处理
     }];
 }
 @end
 ```
-##### 3.2 添加配置文件 solonboot.plist
+##### 3.2 添加配置文件 solonboot.plist （完成组件自发现的配置）
 `solonboot.xmodule = XModule2`
 
-#### 4、主项目引入组xmodule2（内部配置自己完成）
-`pod 'xmodule2'`
+#### 4、主项目引入组module2（内部配置需要自己完成）
+`pod 'module2'`
 
-#### 5 服务调用
+#### 5 调用
 ##### 5.1 本地代码调用
 ```Objective-C
 //调用功能
