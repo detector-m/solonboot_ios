@@ -9,7 +9,12 @@
 
 #### 2、主项目启动服务
 ```Objective-C
-[XApp start:[[XRouterExp alloc] init]];
+#import <solonboot/solonboot.h>
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //启动服务
+    [XApp start:[[XRouterExp alloc] init]];
+}
 ```
 
 #### 3、组件项目进行配配
