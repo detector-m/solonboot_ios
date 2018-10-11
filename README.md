@@ -12,7 +12,7 @@
 #import <solonboot/solonboot.h>
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //启动服务
+    //启动服务（内置了正则路由表 和 HASH路由表，也可以自己定义一个）
     [XApp start:[[XRouterExp alloc] init]];
 }
 ```
