@@ -35,7 +35,7 @@ solonboot是一个跨平台的服务启动框架。有服务端版本（像sprin
 -(void)start:(XApp*) app{
     //注册路由
     [app reg:self expr:@"xapp://module2/xxx" handler:^(XContext * _Nonnull cxt) {
-        [cxt output:@"m2"]; //跳转控制器等...业务处理
+        [cxt output:@"m2"]; //跳转控制器等...业务处理（可以输出结果，或不输出）
     }];
 }
 @end
@@ -50,8 +50,11 @@ solonboot是一个跨平台的服务启动框架。有服务端版本（像sprin
 ##### 5.1 本地代码调用
 ```Objective-C
 //调用功能
+//>不需要回调的
+[XClient call:self url:@"xapp://module2/xxx?id=1" params:nil]; 
+//>需要回调的
 [XClient call:self url:@"xapp://module2/xxx?id=1" params:nil callback:^(id  _Nonnull data) {
-    NSLog(@"%@", data);
+    NSLog(@"%@", data); 
 }];
 
 //分发消息
