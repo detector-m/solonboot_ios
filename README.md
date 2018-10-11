@@ -3,15 +3,15 @@
 
 ### solonboot使用说明
 
-###### 1、相关项目添加引用
+#### 1、相关项目添加引用
 
 `pod 'solonboot',:git=>"https://github.com/noear/solonboot_ios.git"`
 
-###### 2、主项目启动服务
+#### 2、主项目启动服务
 `[XApp start:[[XRouterExp alloc] init]];`
 
-###### 3、组件项目进行配配
-####### 3.1 配置XMoudle
+#### 3、组件项目进行配配
+##### 3.1 配置XMoudle
 ```Objective-C
 XModule2.h
 @interface XModule2 : NSObject<XModule>
@@ -27,18 +27,18 @@ XModule2.m
 }
 @end
 ```
-####### 3.2 添加配置文件 solonboot.plist
+##### 3.2 添加配置文件 solonboot.plist
 `solonboot.xmodule = XModule2`
 
-###### 4、主项目引入组xmodule2（内部配置自己完成）
+#### 4、主项目引入组xmodule2（内部配置自己完成）
 `pod 'xmodule2'`
 
-###### 5 服务调用
-####### 5.1 本地代码调用
+#### 5 服务调用
+##### 5.1 本地代码调用
 ```Objective-C
 [XClient call:self url:@"xapp://module2/xxx?id=1" params:nil];
 ```
-####### 5.2 内嵌WEB调用（需要适配一下WebView）
+##### 5.2 内嵌WEB调用（需要适配一下WebView）
 ```html
 <a href="xapp://module2/xxx?id=1">xxx</a>
 ```
