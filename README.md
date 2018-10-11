@@ -8,7 +8,9 @@
 `pod 'solonboot',:git=>"https://github.com/noear/solonboot_ios.git"`
 
 #### 2、主项目启动服务
-`[XApp start:[[XRouterExp alloc] init]];`
+```Objective-C
+[XApp start:[[XRouterExp alloc] init]];
+```
 
 #### 3、组件项目进行配配
 ##### 3.1 配置XMoudle
