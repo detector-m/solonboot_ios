@@ -13,12 +13,12 @@
 #### 3、组件项目进行配配
 ##### 3.1 配置XMoudle
 ```Objective-C
-XModule2.h
+//XModule2.h
 @interface XModule2 : NSObject<XModule>
 
 @end
 
-XModule2.m
+//XModule2.m
 @implementation XModule2
 -(void)start:(XApp*) app{
     [app reg:self expr:@"xapp://module2/xxx" handler:^(XContext * _Nonnull cxt) {
