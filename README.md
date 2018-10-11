@@ -48,7 +48,11 @@ solonboot是一个跨平台的服务启动框架。有服务端版本（像sprin
 #### 5 服务调用
 ##### 5.1 本地代码调用
 ```Objective-C
+//调用功能
 [XClient call:self url:@"xapp://module2/xxx?id=1" params:nil];
+
+//分发消息
+[XClient send:self url:@"msg://topic/xxx" params:nil];
 ```
 ##### 5.2 内嵌WEB调用（需要适配一下WebView）
 ```html
