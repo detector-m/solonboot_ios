@@ -12,7 +12,7 @@
 
 ###### 3、组件项目进行配配
 ####### 3.1 配置XMoudle
-`
+```object-c
 @interface XModule2 : NSObject<XModule>
 
 @end
@@ -24,7 +24,7 @@
     }];
 }
 @end
-`
+```
 ####### 3.2 添加配置文件 solonboot.plist
 `solonboot.xmodule = XModule2`
 
