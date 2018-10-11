@@ -14,7 +14,7 @@ solonboot是一个跨平台的服务启动框架。有服务端版本（像sprin
 
 #### 2、主项目启动服务
 ```Objective-C
-#import <solonboot/solonboot.h>
+#import <solonboot/solonboot.h>  //:不要太纠结大小写的问题：）
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //启动服务（内置了正则路由表 和 HASH路由表，也可以自己定义一个）
