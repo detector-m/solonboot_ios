@@ -12,7 +12,7 @@
 
 ###### 3、组件项目进行配配
 ####### 3.1 配置XMoudle
-```object-c
+```oc
 XModule2.h
 @interface XModule2 : NSObject<XModule>
 
@@ -35,6 +35,10 @@ XModule2.m
 
 ###### 5 服务调用
 ####### 5.1 本地代码调用
-`[XClient call:self url:@"xapp://module2/xxx?id=1" params:nil];`
+```oc
+[XClient call:self url:@"xapp://module2/xxx?id=1" params:nil];
+```
 ####### 5.2 内嵌WEB调用（需要适配一下WebView）
-`<a href="xapp://module2/xxx?id=1">xxx</a>`
+```html
+<a href="xapp://module2/xxx?id=1">xxx</a>
+```
