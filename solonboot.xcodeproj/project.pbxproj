@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		411881EE216CE80100FF3993 /* XRouterMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 411881EC216CE80100FF3993 /* XRouterMap.h */; };
+		411881EF216CE80100FF3993 /* XRouterMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 411881ED216CE80100FF3993 /* XRouterMap.m */; };
+		411881F1216D8ED300FF3993 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 411881F0216D8ED300FF3993 /* readme.txt */; };
+		41642F7F215CCE1C00960CDE /* solonboot.h in Headers */ = {isa = PBXBuildFile; fileRef = 41642F7D215CCE1C00960CDE /* solonboot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41F81201216AFF6200104310 /* XApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F811FF216AFF6200104310 /* XApp.h */; };
+		41F81202216AFF6200104310 /* XApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F81200216AFF6200104310 /* XApp.m */; };
+		41F81209216AFF8600104310 /* XClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F81207216AFF8600104310 /* XClient.h */; };
+		41F8120A216AFF8600104310 /* XClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F81208216AFF8600104310 /* XClient.m */; };
+		41F8120D216AFF9B00104310 /* XContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F8120B216AFF9B00104310 /* XContext.h */; };
+		41F8120E216AFF9B00104310 /* XContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F8120C216AFF9B00104310 /* XContext.m */; };
+		41F81211216AFFAB00104310 /* XRouterExp.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F8120F216AFFAB00104310 /* XRouterExp.h */; };
+		41F81212216AFFAB00104310 /* XRouterExp.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F81210216AFFAB00104310 /* XRouterExp.m */; };
+		41F81216216B002100104310 /* XHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F81214216B002100104310 /* XHandler.h */; };
+		41F8121A216B007800104310 /* XCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F81218216B007800104310 /* XCallback.h */; };
+		41F81222216B16B300104310 /* XModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F81220216B16B300104310 /* XModule.h */; };
+		41F81226216B17D600104310 /* XUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F81224216B17D600104310 /* XUtil.h */; };
+		41F81227216B17D600104310 /* XUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F81225216B17D600104310 /* XUtil.m */; };
+		5F1E3EC4ECCC75D356C397CD /* Pods_solonboot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD0CFC304F33F32807CCC8F /* Pods_solonboot.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		411881EB216CDDB400FF3993 /* XRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRouter.h; sourceTree = "<group>"; };
+		411881EC216CE80100FF3993 /* XRouterMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRouterMap.h; sourceTree = "<group>"; };
+		411881ED216CE80100FF3993 /* XRouterMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRouterMap.m; sourceTree = "<group>"; };
+		411881F0216D8ED300FF3993 /* readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		41642F7A215CCE1C00960CDE /* solonboot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = solonboot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41642F7D215CCE1C00960CDE /* solonboot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solonboot.h; sourceTree = "<group>"; };
+		41642F7E215CCE1C00960CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41F811FF216AFF6200104310 /* XApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XApp.h; sourceTree = "<group>"; };
+		41F81200216AFF6200104310 /* XApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XApp.m; sourceTree = "<group>"; };
+		41F81207216AFF8600104310 /* XClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XClient.h; sourceTree = "<group>"; };
+		41F81208216AFF8600104310 /* XClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XClient.m; sourceTree = "<group>"; };
+		41F8120B216AFF9B00104310 /* XContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XContext.h; sourceTree = "<group>"; };
+		41F8120C216AFF9B00104310 /* XContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XContext.m; sourceTree = "<group>"; };
+		41F8120F216AFFAB00104310 /* XRouterExp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRouterExp.h; sourceTree = "<group>"; };
+		41F81210216AFFAB00104310 /* XRouterExp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRouterExp.m; sourceTree = "<group>"; };
+		41F81214216B002100104310 /* XHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XHandler.h; sourceTree = "<group>"; };
+		41F81218216B007800104310 /* XCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCallback.h; sourceTree = "<group>"; };
+		41F81220216B16B300104310 /* XModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XModule.h; sourceTree = "<group>"; };
+		41F81224216B17D600104310 /* XUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XUtil.h; sourceTree = "<group>"; };
+		41F81225216B17D600104310 /* XUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XUtil.m; sourceTree = "<group>"; };
+		5FD0CFC304F33F32807CCC8F /* Pods_solonboot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_solonboot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A379877FAE35DB25A611979C /* Pods-solonboot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-solonboot.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-solonboot/Pods-solonboot.debug.xcconfig"; sourceTree = "<group>"; };
+		EBB8FB14C92F7CDB5EE5789A /* Pods-solonboot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-solonboot.release.xcconfig"; path = "../Pods/Target Support Files/Pods-solonboot/Pods-solonboot.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41642F77215CCE1C00960CDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1E3EC4ECCC75D356C397CD /* Pods_solonboot.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A40484D55A4DA0B2B2AFA17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A379877FAE35DB25A611979C /* Pods-solonboot.debug.xcconfig */,
+				EBB8FB14C92F7CDB5EE5789A /* Pods-solonboot.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		411881EA216CDC8800FF3993 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				41F8120F216AFFAB00104310 /* XRouterExp.h */,
+				41F81210216AFFAB00104310 /* XRouterExp.m */,
+				411881EC216CE80100FF3993 /* XRouterMap.h */,
+				411881ED216CE80100FF3993 /* XRouterMap.m */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		41642F70215CCE1C00960CDE = {
+			isa = PBXGroup;
+			children = (
+				41642F7C215CCE1C00960CDE /* solonboot */,
+				41642F7B215CCE1C00960CDE /* Products */,
+				1A40484D55A4DA0B2B2AFA17 /* Pods */,
+				691973C21BAA26890FCD2518 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		41642F7B215CCE1C00960CDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41642F7A215CCE1C00960CDE /* solonboot.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41642F7C215CCE1C00960CDE /* solonboot */ = {
+			isa = PBXGroup;
+			children = (
+				41F811CF216AFAAF00104310 /* src */,
+				41642F7D215CCE1C00960CDE /* solonboot.h */,
+				41642F7E215CCE1C00960CDE /* Info.plist */,
+				411881F0216D8ED300FF3993 /* readme.txt */,
+			);
+			path = solonboot;
+			sourceTree = "<group>";
+		};
+		41F811CF216AFAAF00104310 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				411881EA216CDC8800FF3993 /* router */,
+				41F81213216AFFD200104310 /* protocol */,
+				41F811FF216AFF6200104310 /* XApp.h */,
+				41F81200216AFF6200104310 /* XApp.m */,
+				41F81207216AFF8600104310 /* XClient.h */,
+				41F81208216AFF8600104310 /* XClient.m */,
+				41F8120B216AFF9B00104310 /* XContext.h */,
+				41F8120C216AFF9B00104310 /* XContext.m */,
+				41F81224216B17D600104310 /* XUtil.h */,
+				41F81225216B17D600104310 /* XUtil.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		41F81213216AFFD200104310 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				41F81214216B002100104310 /* XHandler.h */,
+				41F81218216B007800104310 /* XCallback.h */,
+				41F81220216B16B300104310 /* XModule.h */,
+				411881EB216CDDB400FF3993 /* XRouter.h */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		691973C21BAA26890FCD2518 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FD0CFC304F33F32807CCC8F /* Pods_solonboot.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		41642F75215CCE1C00960CDE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41F81216216B002100104310 /* XHandler.h in Headers */,
+				411881EE216CE80100FF3993 /* XRouterMap.h in Headers */,
+				41642F7F215CCE1C00960CDE /* solonboot.h in Headers */,
+				41F8120D216AFF9B00104310 /* XContext.h in Headers */,
+				41F81209216AFF8600104310 /* XClient.h in Headers */,
+				41F81211216AFFAB00104310 /* XRouterExp.h in Headers */,
+				41F8121A216B007800104310 /* XCallback.h in Headers */,
+				41F81222216B16B300104310 /* XModule.h in Headers */,
+				41F81201216AFF6200104310 /* XApp.h in Headers */,
+				41F81226216B17D600104310 /* XUtil.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		41642F79215CCE1C00960CDE /* solonboot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41642F82215CCE1C00960CDE /* Build configuration list for PBXNativeTarget "solonboot" */;
+			buildPhases = (
+				8DAC718824FE696A279750D2 /* [CP] Check Pods Manifest.lock */,
+				41642F75215CCE1C00960CDE /* Headers */,
+				41642F76215CCE1C00960CDE /* Sources */,
+				41642F77215CCE1C00960CDE /* Frameworks */,
+				41642F78215CCE1C00960CDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = solonboot;
+			productName = solonboot;
+			productReference = 41642F7A215CCE1C00960CDE /* solonboot.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		41642F71215CCE1C00960CDE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = noear;
+				TargetAttributes = {
+					41642F79215CCE1C00960CDE = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 41642F74215CCE1C00960CDE /* Build configuration list for PBXProject "solonboot" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 41642F70215CCE1C00960CDE;
+			productRefGroup = 41642F7B215CCE1C00960CDE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				41642F79215CCE1C00960CDE /* solonboot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41642F78215CCE1C00960CDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				411881F1216D8ED300FF3993 /* readme.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8DAC718824FE696A279750D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-solonboot-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41642F76215CCE1C00960CDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41F81227216B17D600104310 /* XUtil.m in Sources */,
+				41F81202216AFF6200104310 /* XApp.m in Sources */,
+				41F81212216AFFAB00104310 /* XRouterExp.m in Sources */,
+				41F8120E216AFF9B00104310 /* XContext.m in Sources */,
+				411881EF216CE80100FF3993 /* XRouterMap.m in Sources */,
+				41F8120A216AFF8600104310 /* XClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		41642F80215CCE1C00960CDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		41642F81215CCE1C00960CDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		41642F83215CCE1C00960CDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A379877FAE35DB25A611979C /* Pods-solonboot.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = X278PU43FN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = solonboot/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.noear.solonboot;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		41642F84215CCE1C00960CDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBB8FB14C92F7CDB5EE5789A /* Pods-solonboot.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = X278PU43FN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = solonboot/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.noear.solonboot;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		41642F74215CCE1C00960CDE /* Build configuration list for PBXProject "solonboot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41642F80215CCE1C00960CDE /* Debug */,
+				41642F81215CCE1C00960CDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41642F82215CCE1C00960CDE /* Build configuration list for PBXNativeTarget "solonboot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41642F83215CCE1C00960CDE /* Debug */,
+				41642F84215CCE1C00960CDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 41642F71215CCE1C00960CDE /* Project object */;
+}
