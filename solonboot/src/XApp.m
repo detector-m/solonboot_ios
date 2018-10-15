@@ -18,8 +18,9 @@ static id _global = nil;
 @interface XApp (){
     NSMutableArray* _modules;
     id<XRouter> _router; /** 路由器 */
+    UIApplication* _application;
 }
--(instancetype)initWith:(id<XRouter>)router;
+-(instancetype)initWith:(UIApplication*)application router:(id<XRouter>)router;
  /** 加载模块 */
 -(void)loadModules;
 -(void)do_execute:(XContext *)context handler:(XHandler)handler;
@@ -33,9 +34,9 @@ static id _global = nil;
     return _global;
 }
 
-+(instancetype)start:(id<XRouter>)router{
++(instancetype)start:(UIApplication*)application router:(id<XRouter>)router{
     if(_global == nil){
-        _global =  [[XApp alloc] initWith:router];
+        _global =  [[XApp alloc] initWith:application router:router];
     
         //加载组件
         @try {
@@ -48,9 +49,10 @@ static id _global = nil;
     return _global;
 }
 
--(instancetype)initWith:(id<XRouter>)router{
+-(instancetype)initWith:(UIApplication*)application router:(id<XRouter>)router{
     _router = router;
     _modules = [NSMutableArray array];
+    _application = application;
     
     return self;
 }
@@ -88,6 +90,10 @@ static id _global = nil;
         }
         
     }
+}
+    
+-(UIApplication*)application{
+    return _application;
 }
 
 -(void)reg:(NSObject*) obj expr:(NSString*)expr handler:(XHandler)handler{

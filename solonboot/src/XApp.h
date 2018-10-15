@@ -6,7 +6,7 @@
 //  Copyright © 2018 noear. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "XRouter.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -16,8 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 /** 应用全局对象 */
 +(instancetype)global;
 /** 启动应用（全局只启动一个） */
-+(instancetype)start:(id<XRouter>)router;
++(instancetype)start:(UIApplication*)application router:(id<XRouter>)router;
 
+-(UIApplication*)application;
+    
 /** 注册路由 */
 -(void)reg:(NSObject*) obj expr:(NSString*)expr handler:(XHandler)handler;
 /** 注销路由 */

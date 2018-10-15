@@ -31,9 +31,6 @@
         [XApp.global execute:ctx isMultiple:isMultiple];
     } @catch (NSException* ex) {
         NSLog(@"%@", ex);
-    } @finally {
-        //3. 销毁上下文
-        [ctx destroy];
     }
 }
 
