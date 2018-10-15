@@ -20,7 +20,7 @@ solonboot是一个跨平台的服务启动框架。有服务端版本（像sprin
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //启动服务（内置了正则路由表 和 HASH路由表，也可以自己定义一个）
-    [XApp start:[[XRouterExp alloc] init]];
+    [XApp start:application router:[[XRouterExp alloc] init]];
 }
 ```
 
@@ -35,6 +35,8 @@ solonboot是一个跨平台的服务启动框架。有服务端版本（像sprin
 //XModule2.m
 @implementation XModule2
 -(void)start:(XApp*) app{
+    //app.application; //此对象可用
+
     //注册路由
     [app reg:self expr:@"xapp://module2/xxx" handler:^(XContext * _Nonnull cxt) {
         [cxt output:@"m2"]; //跳转控制器等...业务处理（可以输出结果，或不输出）
