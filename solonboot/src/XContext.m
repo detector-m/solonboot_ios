@@ -106,7 +106,7 @@
 
 -(void)output:(id)data{
     if(_callback != nil){
-        _callback(data);
+        _callback(self,data);
     }
 }
 

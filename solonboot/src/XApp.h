@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "XRouter.h"
+#import "XModule.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 +(instancetype)start:(UIApplication*)application router:(id<XRouter>)router;
 
 -(UIApplication*)application;
+    
+/** 手动添加模块 */
+-(void)addModule:(id<XModule>)module;
     
 /** 注册路由 */
 -(void)reg:(NSObject*) obj expr:(NSString*)expr handler:(XHandler)handler;

@@ -7,10 +7,9 @@
 //
 
 #import "XApp.h"
-#import "XRouter.h"
-#import "XModule.h"
 #import "XUtil.h"
 #import "XContext.h"
+
 
 static id _global = nil;
 
@@ -21,7 +20,7 @@ static id _global = nil;
     UIApplication* _application;
 }
 -(instancetype)initWith:(UIApplication*)application router:(id<XRouter>)router;
- /** 加载模块 */
+/** 自动加载模块 */
 -(void)loadModules;
 -(void)do_execute:(XContext *)context handler:(XHandler)handler;
 
@@ -77,12 +76,8 @@ static id _global = nil;
             
             if([XUtil isEmpty:xmstr] == false){
                 // 创建对象
-                id xmobj = [XUtil newClass:xmstr];
-                if(xmobj!=nil){
-                    [xmobj start:self]; //xmobj is XModule
-                
-                    [_modules addObject:xmobj];
-                }
+                id<XModule> module = (id<XModule>)[XUtil newClass:xmstr];
+                [self addModule:module];
             }
         }
         @catch(NSException* ex){
@@ -94,6 +89,15 @@ static id _global = nil;
     
 -(UIApplication*)application{
     return _application;
+}
+    
+/** 手动添加模块 */
+-(void)addModule:(id<XModule>)module{
+    if(module != nil){
+        [module start:self]; //xmobj is XModule
+    
+        [_modules addObject:module];
+    }
 }
 
 -(void)reg:(NSObject*) obj expr:(NSString*)expr handler:(XHandler)handler{

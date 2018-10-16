@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class XContext;
+
 NS_ASSUME_NONNULL_BEGIN
 /** 通用回调 */
-typedef void(^XCallback)(id data);
+typedef void(^XCallback)(XContext* context,id data);
 
 NS_ASSUME_NONNULL_END
