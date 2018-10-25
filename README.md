@@ -38,8 +38,8 @@ solonboot是一个跨平台的服务启动框架。有服务端版本（像sprin
     //app.application; //此对象可用
 
     //注册路由
-    [app reg:self expr:@"xapp://module2/xxx" handler:^(XContext * _Nonnull cxt) {
-        [cxt output:@"m2"]; //跳转控制器等...业务处理（可以输出结果，或不输出）
+    [app reg:self expr:@"xapp://module2/xxx" handler:^(XContext*  c) {
+        [c output:@"m2"]; //跳转控制器等...业务处理（可以输出结果，或不输出）
     }];
 }
 @end
@@ -57,7 +57,7 @@ solonboot是一个跨平台的服务启动框架。有服务端版本（像sprin
 ////不需要回调的
 [XClient call:self url:@"xapp://module2/xxx?id=1" params:nil]; 
 ////需要回调的
-[XClient call:self url:@"xapp://module2/xxx?id=1" params:nil callback:^(XContext context,id  _Nonnull data) {
+[XClient call:self url:@"xapp://module2/xxx?id=1" params:nil callback:^(XContext* c,id data) {
     NSLog(@"%@", data); 
 }];
 
