@@ -12,6 +12,7 @@
 @interface XContext (){
     NSString* _originalUrl;
     NSMutableDictionary* _paramMap;
+    NSMutableDictionary* _attrMap;
     
     BOOL _handled;
     XCallback _callback;
@@ -28,6 +29,7 @@
     _originalUrl = url;
     
     _paramMap = [NSMutableDictionary dictionary];
+    _attrMap = [NSMutableDictionary dictionary];
     _requester = requester;
     _callback = callback;
     
@@ -47,6 +49,10 @@
                 [_paramMap setObject:kv[1] forKey:kv[0]];
             }
         }
+    }
+    
+    if([_paramMap.allKeys containsObject:@"callback"]){
+        [_attrMap setObject:_paramMap[@"callback"] forKey:@"callback"];
     }
     
     return self;
@@ -102,6 +108,15 @@
 }
 -(NSDictionary*)paramMap{
     return _paramMap;
+}
+
+/** 设置附加特性 */
+-(void)attrSet:(NSString*)key val:(id)val{
+    [_attrMap setObject:val forKey:key];
+}
+/** 获取附加特性 */
+-(id)attrGet:(NSString*)key{
+    return [_attrMap objectForKey:key];
 }
 
 -(void)output:(id)data{

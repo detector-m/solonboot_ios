@@ -13,25 +13,26 @@
 
 @implementation XClient
 
-+(void)call:(id)requester url:(NSString*)url params:(nullable NSDictionary*)params{
-    [self do_handle:requester url:url params:params callback:nil isMultiple:FALSE];
++(BOOL)call:(id)requester url:(NSString*)url params:(nullable NSDictionary*)params{
+    return [self do_handle:requester url:url params:params callback:nil isMultiple:FALSE];
 }
-+(void)call:(id)requester url:(NSString*)url params:(nullable NSDictionary*)params callback:(nullable XCallback)callback{
-    [self do_handle:requester url:url params:params callback:callback isMultiple:FALSE];
++(BOOL)call:(id)requester url:(NSString*)url params:(nullable NSDictionary*)params callback:(nullable XCallback)callback{
+    return [self do_handle:requester url:url params:params callback:callback isMultiple:FALSE];
 }
-+(void)send:(id)requester url:(NSString*)url params:(nullable NSDictionary*)params{
-    [self do_handle:requester url:url params:params callback:nil isMultiple:TRUE];
++(BOOL)send:(id)requester url:(NSString*)url params:(nullable NSDictionary*)params{
+    return [self do_handle:requester url:url params:params callback:nil isMultiple:TRUE];
 }
 
-+(void)do_handle:(id)requester url:(NSString*)url params:(nullable NSDictionary*)params callback:(nullable XCallback)callback isMultiple:(BOOL)isMultiple{
++(BOOL)do_handle:(id)requester url:(NSString*)url params:(nullable NSDictionary*)params callback:(nullable XCallback)callback isMultiple:(BOOL)isMultiple{
     XContext* ctx = [[XContext alloc] initWith:requester url:url params:params callback:callback];
     
     @try {
         //2.尝试执行
-        [XApp.global execute:ctx isMultiple:isMultiple];
+        return [XApp.global execute:ctx isMultiple:isMultiple];
     } @catch (NSException* ex) {
         NSLog(@"%@", ex);
     }
+    return FALSE;
 }
 
 @end
