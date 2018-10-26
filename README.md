@@ -68,8 +68,10 @@ solonboot是一个跨平台的服务启动框架。有服务端版本（像sprin
 ```html
 <a href="xapp://module2/xxx?id=1">xxx</a>
 ```
-<br/>
-# 搞个复杂点的示例
+
+# 复杂一点的示例
+有助于了解期作用...
+
 ```Objective-C
 
 #import "XModuleXxxx.h"
