@@ -58,11 +58,37 @@ static id _global = nil;
 
 -(void)loadModules{
     NSArray<NSBundle *> *ary = [NSBundle allFrameworks];
-    for(NSBundle* boundle in ary){
+    
+    NSString *boundleExtension  = @"bundle";
+    NSString *boundleName = nil;
+    NSString *boundlePath = nil;
+    NSBundle* boundle = nil;
+    
+    for(NSBundle* b1 in ary){
+        boundle = b1;
         NSString* path = [boundle pathForResource:@"solonboot" ofType:@"plist"];
         
         if([XUtil isEmpty:path]){
-            continue;
+            /** 如果配置路径不存在 */
+            
+            //1.检查是否存在二级包
+             boundleName = [boundle infoDictionary][@"CFBundleExecutable"];
+            if([XUtil isEmpty:boundleName]){
+                continue;
+            }
+            
+            //2.检查是否有包路径
+            boundlePath = [boundle pathForResource:boundleName ofType:boundleExtension];
+            if([XUtil isEmpty:boundlePath]){
+                continue;
+            }
+            
+            //3.检查是否有配置文件的路径
+            boundle = [NSBundle bundleWithPath:boundlePath];
+            path = [boundle pathForResource:@"solonboot" ofType:@"plist"];
+            if([XUtil isEmpty:path]){
+                continue;
+            }
         }
         
         NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
@@ -108,8 +134,10 @@ static id _global = nil;
     [_router remove:obj expr:expr];
 }
 
--(void)execute:(XContext *)context isMultiple:(BOOL)isMultiple{
+-(BOOL)execute:(XContext *)context isMultiple:(BOOL)isMultiple{
     NSString* fullpath = context.fullpath;
+    BOOL is_matched = FALSE;
+    
     if(isMultiple){
         for(XHandler handler in [_router matches:fullpath]){
             @try {
@@ -117,11 +145,15 @@ static id _global = nil;
             } @catch (NSException *ex) {
                 NSLog(@"%@", ex);
             }
+            is_matched = TRUE;
         }
     }else{
         XHandler handler   = [_router match:fullpath];
         [self do_execute:context handler:handler];
+        is_matched = (handler != nil);
     }
+    
+    return is_matched;
 }
 
 -(void)do_execute:(XContext *)context handler:(XHandler)handler{

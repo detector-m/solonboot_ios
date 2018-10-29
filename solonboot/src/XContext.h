@@ -45,6 +45,8 @@ NS_ASSUME_NONNULL_BEGIN
 -(id)param:(NSString*)key def:(id)def;
 /** 获取所有参数 */
 -(NSDictionary*)paramMap;
+/** 是否存在某个参数 */
+-(BOOL)paramHas:(NSString*)key;
 
 /** 设置附加特性 */
 -(void)attrSet:(NSString*)key val:(id)val;

@@ -109,6 +109,10 @@
 -(NSDictionary*)paramMap{
     return _paramMap;
 }
+/** 是否存在某个参数 */
+-(BOOL)paramHas:(NSString*)key{
+    return [_paramMap.allKeys containsObject:key];
+}
 
 /** 设置附加特性 */
 -(void)attrSet:(NSString*)key val:(id)val{

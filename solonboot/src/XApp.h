@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)unreg:(NSObject*) obj expr:(NSString*)expr;
 
 /** 路由执行 */
--(void)execute:(XContext *)context isMultiple:(BOOL)isMultiple;
+-(BOOL)execute:(XContext *)context isMultiple:(BOOL)isMultiple;
 
 @end
 
