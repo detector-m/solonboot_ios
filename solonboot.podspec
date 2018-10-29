@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "solonboot"
-  s.version      = "0.1.8"
+  s.version      = "0.1.15"
   s.summary      = "solonboot"
   s.description  = <<-DESC
                   A framework for service of component functions
