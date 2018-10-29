@@ -68,3 +68,57 @@ solonboot是一个跨平台的服务启动框架。有服务端版本（像sprin
 ```html
 <a href="xapp://module2/xxx?id=1">xxx</a>
 ```
+
+# 复杂一点的XModule示例
+有助于了解期作用...
+
+```Objective-C
+
+#import "XModuleXxxx.h"
+#import "XxxxApp.h"
+
+@implementation XModuleXxxx
+
+- (void)start:(XApp *)app
+{
+    [app reg:self expr:@"xapp://Xxxx/*" handler:^(XContext * _Nonnull context) {
+        
+        NSString *p = context.path;
+        NSDictionary *params = context.paramMap;
+        UIViewController *vc = (UIViewController *)context.requester;
+        
+        NSString *mobile = params[@"mobile"];
+        NSString *ugroupId = params[@"ugroupId"];
+        
+        if([p isEqualToString:@"/id"]){
+            [XxxxApp showIdOcrView:vc mobile:mobile ugroupId:ugroupId completion:^(BOOL success, NSString * message) {
+                [context output:@(success)];
+            }];
+        }
+        else if([p isEqualToString:@"/face"]){
+            [XxxxApp showFaceLiveView:vc mobile:mobile ugroupId:ugroupId completion:^(BOOL success, NSString * message) {
+                [context output:@(success)];
+            }];
+        }
+        else if([p isEqualToString:@"/contacts"]){
+            [XxxxApp showContactsView:vc mobile:mobile ugroupId:ugroupId completion:^(BOOL success, NSString * message) {
+                [context output:@(success)];
+            }];
+        }
+        else if([p isEqualToString:@"/tele"]){
+            [XxxxApp showWebView:vc mobile:mobile ugroupId:ugroupId AuthUrlType:AuthUrlTypeWechash completion:^(BOOL success, NSString * message) {
+                [context output:@(success)];
+            }];
+        }
+        else if([p isEqualToString:@"/sesame"]){
+            [XxxxApp showWebView:vc mobile:mobile ugroupId:ugroupId AuthUrlType:AuthUrlTypeZmxy completion:^(BOOL success, NSString * message) {
+                
+                [context output:@(success)];
+            }];
+        }
+    }];
+}
+
+@end
+
+```
